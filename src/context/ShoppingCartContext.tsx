@@ -40,6 +40,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 
     function increaseItemQuantity(id: number) {
         console.info({ id });
+        console.info({ isOpen });
         setCartItems((currentItems: CartItem[]) => {
             if (currentItems.find(item => item.id === id) === null) {
                 return [...currentItems, { id, quantity: 1 }]
