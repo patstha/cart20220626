@@ -1,3 +1,5 @@
-export function About() {
-    return <h1>About us</h1>
+import { type ReactElement } from 'react'
+
+export function About (): ReactElement {
+  return <h1>About us</h1>
 }

@@ -1,10 +1,10 @@
-import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap"
-import { NavLink } from "react-router-dom"
-import { useShoppingCart } from "../context/ShoppingCartContext"
+import { Button, Container, Nav, Navbar as NavbarBs } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
+import { useShoppingCart } from '../context/ShoppingCartContext'
 
-export function Navbar() {
-    const { openCart, cartQuantity } = useShoppingCart()
-    return (
+export function Navbar () {
+  const { openCart, cartQuantity } = useShoppingCart()
+  return (
         <NavbarBs className="bg-white shadow-sm mb-3" sticky="top">
             <Container>
                 <Nav className="me-auto">
@@ -16,7 +16,7 @@ export function Navbar() {
 
                     <Button
                         onClick={openCart}
-                        style={{ width: "3rem", height: "3 rem", position: "relative" }}
+                        style={{ width: '3rem', height: '3 rem', position: 'relative' }}
                         variant="outline-primary"
                         className="rounded-circle"
                     >
@@ -40,13 +40,13 @@ export function Navbar() {
                         <div
                             className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
                             style={{
-                                color: "white",
-                                width: "1.5rem",
-                                height: "1.5rem",
-                                position: "absolute",
-                                bottom: 0,
-                                right: 0,
-                                transform: "translate(25%, 25%)"
+                              color: 'white',
+                              width: '1.5rem',
+                              height: '1.5rem',
+                              position: 'absolute',
+                              bottom: 0,
+                              right: 0,
+                              transform: 'translate(25%, 25%)'
                             }}>
                             {cartQuantity}
                         </div>
@@ -54,5 +54,5 @@ export function Navbar() {
                 )}
             </Container>
         </NavbarBs>
-    )
+  )
 }
